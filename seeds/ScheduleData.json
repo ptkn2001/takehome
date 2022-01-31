@@ -1,0 +1,26 @@
+[
+    {
+      "name": "Kane, Paul",
+      "time": "8:00 AM",
+      "kind": "New Appointment",
+      "physician": "61f84b8fa20e8b1a30f442c3"
+    },
+    {
+        "name": "Apple, Adam",
+        "time": "9:00 AM",
+        "kind": "Followup",
+        "physician": "61f84b8fa20e8b1a30f442c3"
+      },
+      {
+        "name": "Dean, Ava",
+        "time": "10:00 AM",
+        "kind": "New Appointment",
+        "physician": "61f84b8fa20e8b1a30f442c4"
+      },
+      {
+        "name": "Wang, Gina",
+        "time": "10:00 AM",
+        "kind": "Checkup",
+        "physician": "61f84b8fa20e8b1a30f442c4"
+      }
+  ]
