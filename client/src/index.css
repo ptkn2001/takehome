@@ -435,6 +435,16 @@ a:hover {
   text-decoration: underline;
 }
 
+li:hover {
+  /* color: #065b83;
+  text-decoration: underline; */
+  cursor: pointer;
+}
+
+li.selected {
+  background-color:blue;
+ }
+
 /* HEIGHT / WIDTH UTILS */
 .w-100 {
   width: 100%;

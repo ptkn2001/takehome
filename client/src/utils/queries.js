@@ -17,11 +17,6 @@ export const QUERY_SCHEDULE = gql`
      name
      time
      kind
-     physician {
-       _id
-       name
-       email
-     }
     }
   }
 `;
