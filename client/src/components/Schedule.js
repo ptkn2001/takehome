@@ -1,8 +1,60 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const Schedule = (props) => {
+
+  const [enteredName, setEnteredName] = useState('');
+  const [enteredTime, setEnteredTime] = useState('');
+  const [enteredKind, setEnteredKind] = useState('');
+
+  const nameChangeHandler = (event) => {
+    setEnteredName(event.target.value);
+  };
+
+  const timeChangeHandler = (event) => {
+    setEnteredTime(event.target.value);
+  };
+
+  const kindChangeHandler = (event) => {
+    setEnteredKind(event.target.value);
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    
+    props.onScheduleAdded(enteredName, enteredTime, enteredKind, props.physicianId);
+
+    setEnteredName('');
+    setEnteredTime('');
+    setEnteredKind('');
+  };
+
+
   return <div>
-      <h2>Schedule</h2>
+      <div>
+        <h2>Schedule</h2>
+      </div>
+      <div>
+      <form onSubmit={submitHandler}>
+      <div>
+        <div>
+          <label>Name</label>
+          <input type='text' value={enteredName} onChange={nameChangeHandler} />
+        </div>
+        <div>
+          <label>Time</label>
+          <input type='text' value={enteredTime} onChange={timeChangeHandler} />
+        </div>
+        <div>
+          <label>Kind</label>
+          <input type='text' value={enteredKind} onChange={kindChangeHandler} />
+        </div>
+      </div>
+      <div>
+        <button type='submit'>Add Schedule</button>
+      </div>
+    </form>
+      </div>
+      <div>
       <table>
         <thead>
         <tr>
@@ -21,6 +73,8 @@ const Schedule = (props) => {
       ))}
       </tbody>
       </table>
+      </div>
+      
   </div>;
 };
 
